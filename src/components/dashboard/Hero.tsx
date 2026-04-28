@@ -11,19 +11,29 @@ export const Hero = () => (
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="max-w-3xl"
+        className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center"
       >
-        <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-3 py-1 text-xs font-medium text-muted-foreground shadow-card">
-          <Sparkles className="h-3 w-3 text-energy" />
-          27 research papers · 3 themes · 2017–2023
+        <div>
+          <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-3 py-1 text-xs font-medium text-muted-foreground shadow-card">
+            <Sparkles className="h-3 w-3 text-energy" />
+            27 research papers · 3 themes · 2017-2023
+          </div>
+          <h1 className="mt-6 text-4xl md:text-6xl font-extrabold tracking-tight leading-[1.05]">
+            The environmental cost of <span className="bg-gradient-to-r from-energy via-supply to-ewaste bg-clip-text text-transparent">artificial intelligence</span>.
+          </h1>
+          <p className="mt-6 text-lg text-muted-foreground max-w-2xl leading-relaxed">
+            A visual synthesis of academic and industry research on AI's footprint -
+            mapping the connections between energy consumption, supply chains, and electronic waste.
+          </p>
         </div>
-        <h1 className="mt-6 text-4xl md:text-6xl font-extrabold tracking-tight leading-[1.05]">
-          The environmental cost of <span className="bg-gradient-to-r from-energy via-supply to-ewaste bg-clip-text text-transparent">artificial intelligence</span>.
-        </h1>
-        <p className="mt-6 text-lg text-muted-foreground max-w-2xl leading-relaxed">
-          A visual synthesis of academic and industry research on AI's footprint —
-          mapping the connections between energy consumption, supply chains, and electronic waste.
-        </p>
+        <div className="mx-auto w-full max-w-xl rounded-2xl border border-border/70 bg-card/80 p-3 shadow-card backdrop-blur">
+          <img
+            src="/og-image.svg"
+            alt="AI Eco Insights project visual"
+            className="h-auto w-full rounded-xl border border-border/60"
+            loading="eager"
+          />
+        </div>
       </motion.div>
     </div>
   </section>
